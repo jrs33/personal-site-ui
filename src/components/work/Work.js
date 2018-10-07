@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Project from './Project'
 import axios from 'axios'
 
 class Work extends Component {
@@ -44,7 +45,7 @@ class Work extends Component {
 				<h1>Total: {this.state.totalProjects}</h1>
 				<ul>
 					{this.state.projects.map(project => 
-						<li key={project.id}>{project.sourceAsMap.title}</li>
+						<Project key={project.id} projectMap={project.sourceAsMap} />
 					)}
 				</ul>
 			</div>
