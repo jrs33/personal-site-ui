@@ -34,18 +34,23 @@ class Contact extends Component {
 	render() {
 		if(!this.state.isMessageSent) {
 			return (
-				<form onSubmit={this.handleSubmit}>
-					<label>Name:</label> 
-					<input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-					
-					<label>Email:</label>
-					<input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-					
-					<label>Message:</label> 
-					<input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
-					
-					<input type="submit" value="Submit" />
-				</form>
+				<div>
+					<h1>Interested in working together?</h1>
+					<p>Fill out the form below with your info and I will be sure to respond within a few days</p>
+					<hr />
+					<form onSubmit={this.handleSubmit}>
+						<label>Name:</label> 
+						<input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+						
+						<label>Email:</label>
+						<input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+						
+						<label>Tell me about your project:</label> 
+						<input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
+						
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
 			)
 		} else {
 			return <h1>woo!</h1>
