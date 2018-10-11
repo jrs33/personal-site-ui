@@ -1,0 +1,15 @@
+.search {
+	margin-top: 200px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+.inline {
+	float: left;
+}
+
+li.projects{
+	list-style-type: none;
+	padding: 20px;
+	height: 100px;
+}
