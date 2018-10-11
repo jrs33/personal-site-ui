@@ -7,27 +7,41 @@ import About from './components/about/About'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom'
+import './App.css'
+
+const activeNavLink = {fontWeight: "bold", "border-bottom": "solid", "border-bottom-color": "red"}
 
 class App extends Component {
+
   render() {
     return (
       <Router>
-        <div>
-          <ul>
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/work">Work</Link></li>
-            <li><Link to="/books">Books</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/home" component={Home} />
-          <Route path="/work" component={Work} />
-          <Route path="/books" component={Books} />
-          <Route path="/contact" component={Contact} />
+        <div className="globalStyles">
+          <div>
+            <ul className="navList">
+              <li className="navListItem">
+                <NavLink className="navLink" activeStyle={activeNavLink} to="/home">Home</NavLink>
+              </li>
+              <li className="navListItem">
+                <NavLink className="navLink" activeStyle={activeNavLink} to="/about">About</NavLink>
+              </li>
+              <li className="navListItem">
+                <NavLink className="navLink" activeStyle={activeNavLink} to="/work">Work</NavLink>
+              </li>
+              <li className="navListItem">
+                <NavLink className="navLink" activeStyle={activeNavLink} to="/contact">Contact</NavLink>
+               </li>
+            </ul>
+          </div>
+          <div>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/home" component={Home} />
+            <Route path="/work" component={Work} />
+            <Route path="/contact" component={Contact} />
+          </div>
         </div>
       </Router>
     );

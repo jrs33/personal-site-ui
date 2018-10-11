@@ -1,0 +1,49 @@
+ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow: auto;
+}
+
+ul li {
+	display: inline;
+	background-color: #f1f1f1;
+}
+
+ul li .navLink {
+	display: inline-block;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+ul li .navLink:hover {
+    color: red;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: solid;
+    border-bottom-color: red;
+}
+
+.activeNavLink {
+	color: red;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: bold;
+}
+
+h6 {
+	font-size: 2em;
+}
+
+.globalStyles {
+	font-family: "Open Sans";
+}
