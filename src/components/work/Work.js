@@ -7,6 +7,8 @@ class Work extends Component {
 	constructor(props) {
 		super(props);
 
+		this.search = React.createRef();
+
 		this.initialState = {
 			totalProjects: 0,
 			projects: [],
@@ -16,7 +18,7 @@ class Work extends Component {
 		this.state = this.initialState;
 	}
 
-	updateProjectState() {
+	getAllProjects() {
 		axios.get('/projects/search/text')
 		.then(response => {
 			if(response.data) {
@@ -30,8 +32,15 @@ class Work extends Component {
 		})
 	}
 
-	handleSearchInput() {
-		axios.get('/projects/search/text?q='+this.search.value)
+	handleSearchInput = () => {
+		console.log(this.search.current.value)
+
+		let searchQuery = this.search.current.value.trim();
+		if(!searchQuery) {
+			return;
+		}
+
+		axios.get('/projects/search/text?q='+searchQuery)
 		.then(response => {
 			if(response.data) {
 				this.modifyState(response.data.totalHits, response.data.hits)
@@ -53,16 +62,18 @@ class Work extends Component {
 	}
 
 	componentDidMount() {
-		this.updateProjectState()	
+		this.getAllProjects()	
 	}
 
 	render() {
 		return (
 			<div>
 				<div className="search">
-					<i className="inline">Total: {this.state.totalProjects}</i>
+					<input className="searchBox" type="text" ref={this.search} placeHolder="keyword searches..." onChange={this.handleSearchInput} />
+					<p className="total">Total: {this.state.totalProjects}</p>
 				</div>
 				<div>
+					<hr />
 					<li className="projects">
 						{this.state.projects.map(project => 
 							<Project key={project.id} projectMap={project.sourceAsMap} />
