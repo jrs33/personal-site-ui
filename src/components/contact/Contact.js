@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Contact.css'
 
 class Contact extends Component {
 	constructor(props) {
@@ -36,18 +37,12 @@ class Contact extends Component {
 			return (
 				<div>
 					<h1>Interested in working together?</h1>
-					<p>Fill out the form below with your info and I will be sure to respond within a few days</p>
 					<hr />
 					<form onSubmit={this.handleSubmit}>
-						<label>Name:</label> 
-						<input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-						
-						<label>Email:</label>
-						<input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-						
-						<label>Tell me about your project:</label> 
-						<input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
-						
+					<p>Fill out the form below with your info and I will be sure to respond within a few days!</p>
+						<input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />
+						<input type="text" name="email" placeholder="email" value={this.state.email} onChange={this.handleChange} />
+						<textarea type="text" name="message" placeholder="tell me about your project..." value={this.state.message} onChange={this.handleChange} />
 						<input type="submit" value="Submit" />
 					</form>
 				</div>
