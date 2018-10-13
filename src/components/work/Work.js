@@ -68,12 +68,13 @@ class Work extends Component {
 	render() {
 		return (
 			<div>
+				<h1>Search Projects</h1>
+				<hr />
 				<div className="search">
 					<input className="searchBox" type="text" ref={this.search} placeHolder="keyword searches..." onChange={this.handleSearchInput} />
 					<p className="total">Total: {this.state.totalProjects}</p>
 				</div>
 				<div>
-					<hr />
 					<li className="projects">
 						{this.state.projects.map(project => 
 							<Project key={project.id} projectMap={project.sourceAsMap} />
