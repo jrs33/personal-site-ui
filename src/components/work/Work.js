@@ -37,6 +37,7 @@ class Work extends Component {
 
 		let searchQuery = this.search.current.value.trim();
 		if(!searchQuery) {
+			this.getAllProjects();
 			return;
 		}
 
