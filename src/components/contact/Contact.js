@@ -37,7 +37,6 @@ class Contact extends Component {
 			return (
 				<div>
 					<h1>Interested in working together?</h1>
-					<hr />
 					<form onSubmit={this.handleSubmit}>
 					<p>Fill out the form below with your info and I will be sure to respond within a few days!</p>
 						<input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />

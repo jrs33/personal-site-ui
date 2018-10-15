@@ -13,13 +13,6 @@ const Home = () => {
 				<SocialIcon url="https://joshsuretteblog.com/" type="wordpress" color="red" />
 				<SocialIcon url="https://github.com/jrs33" color="red" />
 			</div>
-			<hr />
-			<div className="thanks">
-				<p> Special thanks to: </p>
-				<a href="https://www.elastic.co/">
-					<img className="icon" src={ elasticsearch } alt="elasticsearch" />
-				</a>
-			</div>
 		</div>
 	);
 }
