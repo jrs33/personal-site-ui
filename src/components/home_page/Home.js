@@ -1,6 +1,5 @@
 import React from 'react'
 import icon from '../../favicon.ico'
-import elasticsearch from '../../elasticsearch.png';
 import { SocialIcon } from 'react-social-icons';
 import './Home.css'
 
