@@ -3,13 +3,13 @@ import Home from './components/home_page/Home';
 import Books from './components/book/Books';
 import Work from './components/work/Work';
 import Contact from './components/contact/Contact';
-import About from './components/about/About'
+import About from './components/about/About';
 import {
   BrowserRouter as Router,
   Route,
   NavLink
-} from 'react-router-dom'
-import './App.css'
+} from 'react-router-dom';
+import './App.css';
 
 const activeNavLink = {fontWeight: "bold", "border-bottom": "solid", "border-bottom-color": "red"}
 
