@@ -73,8 +73,6 @@ class Work extends Component {
 				<div className="search">
 					<input className="searchBox" type="text" ref={this.search} placeHolder="keyword searches..." onChange={this.handleSearchInput} />
 					<p className="total">Total: {this.state.totalProjects}</p>
-					<p> &darr; </p>
-					<hr />
 				</div>
 				<div>
 					<li className="projects">
