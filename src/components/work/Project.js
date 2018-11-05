@@ -6,7 +6,7 @@ const Project = (projectMap) => {
 	console.log(jsonMap)
 	return (
 		<div className="card">
-			<h1 className="projectTitle">{jsonMap.title}</h1>
+			<p className="projectTitle">{jsonMap.title}</p>
 			<p>{jsonMap.description}</p>
 		</div>
 	)
