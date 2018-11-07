@@ -30,9 +30,6 @@ class App extends Component {
               <li className="navListItem">
                 <NavLink className="navLink" activeStyle={activeNavLink} to="/work">Work</NavLink>
               </li>
-              <li className="navListItem">
-                <NavLink className="navLink" activeStyle={activeNavLink} to="/contact">Contact</NavLink>
-               </li>
             </ul>
           </div>
           <div>
@@ -40,7 +37,6 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/home" component={Home} />
             <Route path="/work" component={Work} />
-            <Route path="/contact" component={Contact} />
           </div>
         </div>
       </Router>
